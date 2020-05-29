@@ -1,0 +1,43 @@
+
+.menu-bar {
+  width: 100%;
+  overflow: hidden;
+  height: @unit-height;
+  line-height: @unit-height;
+  font-size: 1.2em;
+  background-color: @body-text-color;
+
+  .menu-bar-separator {
+    float: left;
+    width: 1px;
+    height: @unit-height;
+    margin: 0 (@unit-margin / 4);
+    border-left: 1px solid @secondary-text-color;
+  }
+
+  .menu-bar-button {
+    float: left;
+
+    button {
+      height: @unit-height;
+      margin: 0;
+      padding: 0 @unit-margin;
+      border: 0;
+      border-radius: 0;
+      background-color: transparent;
+      color: @body-color;
+      font-size: 1em;
+      transition: background-color 300ms;
+
+      &:hover:not(:disabled) {
+        background-color: @body-highlight-color;
+        color: @body-text-color;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        color: @secondary-text-color;
+      }
+    }
+  }
+}

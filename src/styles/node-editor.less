@@ -1,0 +1,34 @@
+
+.apib-node-editor {
+  .full-layout();
+}
+
+.apib-node-editor-content {
+  .full-layout();
+}
+
+.apib-node-editor-header {
+  width: 100%;
+  height: @unit-height;
+  line-height: @unit-height;
+
+  input {
+    width: 100%;
+    height: @unit-height;
+    line-height: @unit-height;
+    padding: 0 5px;
+    font-size: 1em;
+  }
+
+  &.error input {
+    border: 1px solid @red;
+  }
+}
+
+.apib-node-editor-description {
+  position: absolute;
+  top: @unit-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

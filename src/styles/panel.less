@@ -1,0 +1,36 @@
+
+.v-split-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: @secondary-text-color;
+  cursor: ew-resize;
+
+  &.dragging {
+    background-color: @blue;
+  }
+
+  &.disabled {
+    background-color: @body-color;
+    cursor: default;
+  }
+}
+
+.v-panel-splitter {
+  .full-layout();
+  overflow: hidden;
+
+  .panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    &:nth-child(1) {
+      left: 0;
+    }
+
+    &:nth-child(3) {
+      right: 0;
+    }
+  }
+}

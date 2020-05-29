@@ -1,0 +1,112 @@
+
+@node-item-height: @unit-height;
+
+.apib-node-list {
+  overflow: hidden;
+}
+
+.apib-node-list-items {
+  .full-layout();
+  top: @unit-height;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: darken(@body-color, 5%);
+}
+
+.apib-node-item {
+  position: relative;
+  height: @node-item-height;
+  line-height: @node-item-height;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @body-highlight-color;
+
+    .apib-node-depth-space-bar {
+      border: 0;
+    }
+  }
+
+  &.active {
+    background-color: lighten(@body-highlight-color, 5%);
+    color: @primary-text-color;
+
+    .apib-node-depth-space-bar {
+      border: 0;
+    }
+  }
+}
+
+.apib-node-header {
+  display: block;
+  height: @node-item-height;
+}
+
+.apib-node-header-icon {
+  display: block;
+  position: relative;
+  top: -1px;
+  float: left;
+  width: @node-item-height;
+  text-align: center;
+
+  &.action-get { color: @blue; }
+  &.action-post { color: @green; }
+  &.action-put { color: @yellow; }
+  &.action-delete { color: @red; }
+  &.action-update { color: @orange; }
+}
+
+.apib-node-depth-spaces {
+  display: block;
+  float: left;
+  height: @node-item-height;
+}
+
+.apib-node-depth-space {
+  display: inline-block;
+  width: @node-item-height;
+  height: @node-item-height;
+}
+
+.apib-node-depth-space-bar {
+  display: inline-block;
+  width: @node-item-height / 2;
+  height: @node-item-height;
+  border-right: 1px solid @secondary-text-color;
+}
+
+.apib-node-menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: @node-item-height;
+  height: @node-item-height;
+  line-height: @node-item-height;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+  color: @body-text-color;
+  font-size: 1em;
+  opacity: 0;
+
+  &:hover {
+    background-color: @body-color;
+    cursor: pointer;
+  }
+}
+
+.apib-node-item:hover {
+  .apib-node-menu-button {
+    opacity: 1;
+  }
+}
+
+.apib-node-list-filter {
+  width: 100%;
+  padding: 0 5px;
+}

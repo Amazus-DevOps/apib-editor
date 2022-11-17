@@ -39,7 +39,7 @@
     "mocha": "^3.4.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.17.0",
-    "webpack": "^2.5.1",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
